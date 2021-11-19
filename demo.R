@@ -11,7 +11,15 @@ Options:
 <arg4>            Takes any value (this is a required positional argument)
 " -> doc
 
+
 library(docopt)
 opt <- docopt(doc)
-print(opt)
-print(typeof(opt))
+
+main <- function(opt){
+  # print docopt argument values and data types
+  print(opt)
+  print(typeof(opt))
+}
+
+# call main function
+main(opt)
