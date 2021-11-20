@@ -13,6 +13,36 @@ Options:
 
 from docopt import docopt
 opt = docopt(__doc__)
-print(opt)
-print(type(opt))
-print(opt["<arg4>"])
+
+# define main function
+def main(opt):
+  """
+  This function prints out the docopt args datatypes and values, with value of arg4.
+    
+  Parameters
+  ----------
+  argument : arg
+    Argument value
+        
+  Returns
+  -------
+  dict
+    A dictionary of argument datatypes and values, with value of arg4. 
+        
+  Examples
+  --------
+  >>> main(1, --arg2=2))
+  {'--arg2': '2',
+ '--arg3': None,
+ '<arg1>': '1',
+ '<arg4>': 'final'}
+ 
+  """
+  print(opt)
+  print(type(opt))
+  print(opt["<arg4>"])
+
+# call main function
+if __name__ == "__main__":
+    main(opt)
+
